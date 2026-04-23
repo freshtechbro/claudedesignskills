@@ -5,15 +5,9 @@ description: Comprehensive skill for GSAP (GreenSock Animation Platform) and Scr
 
 # GSAP & ScrollTrigger Development
 
-## Overview
-
-GSAP (GreenSock Animation Platform) is the industry-leading JavaScript animation library for creating high-performance, production-quality animations. ScrollTrigger is GSAP's powerful plugin for scroll-driven animations. Together, they enable everything from simple UI transitions to complex scroll-based storytelling experiences.
-
 ## Core Concepts
 
-### The Basics: Tweens
-
-A **tween** is a single animation from point A to point B.
+### Tweens
 
 ```javascript
 // Animate TO a state (from current)
@@ -38,9 +32,7 @@ gsap.fromTo(".box",
 );
 ```
 
-### Timelines: Sequencing Animations
-
-**Timelines** orchestrate multiple tweens in sequence or overlap.
+### Timelines
 
 ```javascript
 const tl = gsap.timeline();
@@ -102,53 +94,7 @@ gsap.to(".box", {
 });
 ```
 
-### Start & End Positions
-
-Format: `"[trigger position] [viewport position]"`
-
-```javascript
-// Common patterns
-start: "top top"      // Trigger top hits viewport top
-start: "top center"   // Trigger top hits viewport center (default)
-start: "top bottom"   // Trigger top hits viewport bottom
-start: "center center" // Trigger center hits viewport center
-
-// With offsets
-start: "top top+=100"   // 100px below viewport top
-start: "top 80%"        // 80% down the viewport
-end: "+=500"            // 500px after start position
-end: "bottom top"       // Trigger bottom hits viewport top
-```
-
-### Scrubbing (Scroll-Synced Animation)
-
-```javascript
-// Boolean: Direct link to scrollbar (immediate)
-scrub: true
-
-// Number: Smoothing delay in seconds
-scrub: 1  // Takes 1 second to "catch up" to scrollbar
-scrub: 0.5 // Faster, tighter feel
-```
-
-### Toggle Actions
-
-Control animation at four scroll points:
-
-```javascript
-toggleActions: "play pause resume reset"
-// onEnter | onLeave | onEnterBack | onLeaveBack
-
-// Actions: play, pause, resume, restart, reset, complete, reverse, none
-```
-
-Common patterns:
-```javascript
-toggleActions: "play none none none"       // Play once on enter
-toggleActions: "play none none reverse"    // Play forward, reverse back
-toggleActions: "play complete reverse reset" // Full control
-toggleActions: "restart pause resume pause"  // Restart on each enter
-```
+> Start/end positions, scrub options, toggleActions reference → see `references/api_reference.md`
 
 ## Common Patterns
 
@@ -390,129 +336,7 @@ function Component() {
 }
 ```
 
-### Sharing Timeline in React
-
-```javascript
-function App() {
-  const [tl, setTl] = useState();
-
-  useGSAP(() => {
-    const timeline = gsap.timeline();
-    setTl(timeline);
-  }, []);
-
-  return (
-    <div>
-      <Box timeline={tl} index={0} />
-      <Circle timeline={tl} index={1} />
-    </div>
-  );
-}
-
-function Box({ timeline, index }) {
-  const ref = useRef();
-
-  useGSAP(() => {
-    timeline && timeline.to(ref.current, { x: 100 }, index * 0.1);
-  }, [timeline, index]);
-
-  return <div ref={ref} className="box" />;
-}
-```
-
-### Locomotive Scroll Integration
-
-```javascript
-import LocomotiveScroll from 'locomotive-scroll';
-
-const scroller = new LocomotiveScroll({
-  el: document.querySelector('[data-scroll-container]'),
-  smooth: true
-});
-
-ScrollTrigger.scrollerProxy("[data-scroll-container]", {
-  scrollTop(value) {
-    return arguments.length ? scroller.scrollTo(value, 0, 0) : scroller.scroll.instance.scroll.y;
-  },
-  getBoundingClientRect() {
-    return {top: 0, left: 0, width: window.innerWidth, height: window.innerHeight};
-  },
-  pinType: document.querySelector("[data-scroll-container]").style.transform ? "transform" : "fixed"
-});
-
-ScrollTrigger.addEventListener("refresh", () => scroller.update());
-ScrollTrigger.refresh();
-```
-
-## Advanced Techniques
-
-### Image Sequence Scrubbing
-
-```javascript
-const canvas = document.querySelector("canvas");
-const context = canvas.getContext("2d");
-
-const images = [];
-const imageCount = 147;
-const currentFrame = { value: 0 };
-
-for (let i = 0; i < imageCount; i++) {
-  const img = new Image();
-  img.src = `./frames/frame_${i.toString().padStart(4, '0')}.jpg`;
-  images.push(img);
-}
-
-images[0].onload = () => {
-  canvas.width = images[0].width;
-  canvas.height = images[0].height;
-  render();
-};
-
-function render() {
-  context.clearRect(0, 0, canvas.width, canvas.height);
-  context.drawImage(images[Math.floor(currentFrame.value)], 0, 0);
-}
-
-gsap.to(currentFrame, {
-  value: imageCount - 1,
-  snap: "value",
-  ease: "none",
-  scrollTrigger: {
-    trigger: canvas,
-    start: "top top",
-    end: "+=500%",
-    scrub: true,
-    pin: true
-  },
-  onUpdate: render
-});
-```
-
-### Smooth Scroll to Element
-
-```javascript
-gsap.registerPlugin(ScrollToPlugin);
-
-// Scroll to element
-gsap.to(window, {
-  duration: 1,
-  scrollTo: "#section2",
-  ease: "power2.inOut"
-});
-
-// With offset
-gsap.to(window, {
-  duration: 1.5,
-  scrollTo: { y: "#section2", offsetY: 50 },
-  ease: "expo.inOut"
-});
-
-// Horizontal scroll
-gsap.to(".container", {
-  duration: 2,
-  scrollTo: { x: 1000, autoKill: true }
-});
-```
+> Shared React timelines, Locomotive Scroll, image sequence scrubbing → see `references/common_patterns.md`
 
 ### Conditional Animations (Media Queries)
 
@@ -547,15 +371,7 @@ ScrollTrigger.matchMedia({
 
 ## Performance Best Practices
 
-### 1. Use `will-change` CSS
-
-```css
-.animated-element {
-  will-change: transform, opacity;
-}
-```
-
-### 2. Limit Repaints
+### 1. Limit Repaints
 
 ```javascript
 // Good: Animate transform/opacity (GPU accelerated)
@@ -565,7 +381,7 @@ gsap.to(".box", { x: 100, opacity: 0.5 });
 // gsap.to(".box", { width: 500, height: 300 }); // Causes reflow
 ```
 
-### 3. Dispose of ScrollTriggers
+### 2. Dispose of ScrollTriggers
 
 ```javascript
 // Kill individual trigger
@@ -585,21 +401,7 @@ useGSAP(() => {
 }, []);
 ```
 
-### 4. Debounce Resize
-
-ScrollTrigger handles this automatically, but for custom resize logic:
-
-```javascript
-let resizeTimer;
-window.addEventListener("resize", () => {
-  clearTimeout(resizeTimer);
-  resizeTimer = setTimeout(() => {
-    ScrollTrigger.refresh();
-  }, 250);
-});
-```
-
-### 5. Use `invalidateOnRefresh`
+### 3. Use `invalidateOnRefresh`
 
 For dynamic values that change on resize:
 
@@ -679,57 +481,15 @@ tl.to('.box1', { x: 100 })
   .to('.box2', { y: 100 });
 ```
 
-## Easing Reference
+## Debugging Workflow
 
-```javascript
-// Power easings (most common)
-ease: "power1.out"  // Subtle deceleration
-ease: "power2.inOut" // Smooth acceleration/deceleration
-ease: "power3.in"   // Strong acceleration
-ease: "power4.out"  // Very strong deceleration
-
-// Special easings
-ease: "elastic.out"  // Bouncy overshoot
-ease: "back.out"     // Slight overshoot
-ease: "bounce.out"   // Bouncing effect
-ease: "circ.inOut"   // Circular motion feel
-ease: "expo.inOut"   // Exponential (dramatic)
-
-// Linear (for scrubbed scroll animations)
-ease: "none"
-```
-
-## ScrollTrigger Methods
-
-```javascript
-// Refresh all ScrollTriggers (after DOM changes)
-ScrollTrigger.refresh();
-
-// Get all ScrollTriggers
-const triggers = ScrollTrigger.getAll();
-
-// Get specific trigger by ID
-const st = ScrollTrigger.getById("myTrigger");
-
-// Kill trigger
-st.kill();
-
-// Update trigger
-st.scroll(500); // Programmatically set scroll position
-st.enable();
-st.disable();
-
-// Global ScrollTrigger config
-ScrollTrigger.config({
-  limitCallbacks: true, // Improve performance
-  syncInterval: 15 // Throttle scroll checks (ms)
-});
-
-// Debug mode
-ScrollTrigger.defaults({
-  markers: true // Show markers on all triggers
-});
-```
+1. Enable `markers: true` on ScrollTrigger to visualize start/end positions
+2. Check `start`/`end` values match expected scroll positions
+3. Verify `gsap.registerPlugin(ScrollTrigger)` is called before any ScrollTrigger usage
+4. Check for conflicting tweens on the same element (use `GSDevTools` or browser timeline)
+5. Test with `scrub: false` to isolate scroll-linking issues from animation issues
+6. Inspect cleanup — missing `.kill()` calls cause zombie triggers after route changes
+7. Force `ScrollTrigger.refresh()` after dynamic DOM changes or async content loads
 
 ## Resources
 
@@ -749,17 +509,7 @@ This skill includes bundled resources:
 - `easings/`: Easing visualization HTML tool
 - `examples/`: Real-world ScrollTrigger examples
 
-## When to Use This Skill
+## Related Skills
 
-Use this skill when:
-- Creating smooth web animations
-- Building scroll-driven experiences
-- Implementing parallax effects
-- Sequencing complex animations
-- Animating DOM, SVG, Canvas, or WebGL
-- Integrating animations with Three.js or React
-- Building scrollytelling websites
-- Creating interactive UI transitions
-
-For Three.js-specific animations, also reference the **threejs-webgl** skill.
-For React components with built-in animations, reference the **motion-framer** skill.
+- **threejs-webgl**: Three.js-specific animations and WebGL integration
+- **motion-framer**: React component animations with Framer Motion
