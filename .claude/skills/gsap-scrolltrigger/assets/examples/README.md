@@ -109,7 +109,7 @@ gsap.to(".bg", {
 **Use Cases**: Headlines, storytelling, attention-grabbing reveals
 
 ```javascript
-// Requires SplitText plugin (Club GreenSock)
+// Requires SplitText plugin (free; gsap.registerPlugin(SplitText))
 const split = new SplitText(".text", { type: "lines" });
 
 gsap.from(split.lines, {

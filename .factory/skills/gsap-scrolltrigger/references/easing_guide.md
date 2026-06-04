@@ -533,7 +533,7 @@ gsap.to(".anvil", { y: 500, duration: 1.5, ease: "power4.in" });
 
 ### Custom Bezier Curve
 ```javascript
-// Use CustomEase plugin (Club GreenSock)
+// CustomEase plugin (free; gsap.registerPlugin(CustomEase))
 gsap.registerPlugin(CustomEase);
 
 CustomEase.create("customBounce", "0.5,0,0.75,1.5,1");

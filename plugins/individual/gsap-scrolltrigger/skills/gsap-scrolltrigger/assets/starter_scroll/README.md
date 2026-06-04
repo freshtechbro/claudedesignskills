@@ -441,7 +441,7 @@ Works with any static hosting:
 
 This template is provided as-is for use in any project (personal or commercial).
 
-GSAP is licensed under [GreenSock License](https://gsap.com/licensing/). Free for most projects, paid license required for commercial use.
+GSAP and all official plugins (ScrollTrigger, SplitText, CustomEase, and others) are free for all uses, including commercial. See [GSAP licensing](https://gsap.com/licensing/) and the [Webflow + GreenSock announcement](https://gsap.com/blog/webflow-greensock/).
 
 ---
 
