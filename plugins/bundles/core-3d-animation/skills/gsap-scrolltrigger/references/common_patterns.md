@@ -497,7 +497,7 @@ tl.to(".box1", { x: 500, rotation: 360 })
 ### 7.1 Text Reveal (Line by Line)
 
 ```javascript
-// Using SplitText (Club GreenSock plugin)
+// SplitText plugin (free; gsap.registerPlugin(SplitText))
 const split = new SplitText(".text-reveal", { type: "lines" });
 
 gsap.from(split.lines, {
@@ -512,7 +512,7 @@ gsap.from(split.lines, {
 ### 7.2 Scrambled Text Effect
 
 ```javascript
-// Using ScrambleText (Club GreenSock plugin)
+// ScrambleText plugin (free; gsap.registerPlugin(ScrambleTextPlugin))
 gsap.to(".scramble", {
   duration: 2,
   scrambleText: {
