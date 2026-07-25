@@ -146,9 +146,9 @@ class R3FComponentGenerator:
         for event in self.events:
             if event.startswith('on'):
                 handler_name = event[2:].lower()
-                handlers.append(f'{event}={(e) => console.log("{handler_name}", e)}')
+                handlers.append(f'{event}={{(e) => console.log("{handler_name}", e)}}')
             else:
-                handlers.append(f'on{event.capitalize()}={(e) => console.log("{event}", e)}')
+                handlers.append(f'on{event.capitalize()}={{(e) => console.log("{event}", e)}}')
 
         return "\n      ".join(handlers)
 
@@ -489,27 +489,27 @@ import {{ OrbitControls, Environment, ContactShadows }} from '@react-three/drei'
 function Scene() {{
   return (
     <>
-      {/* Lighting */}
+      {{/* Lighting */}}
       <ambientLight intensity={{0.5}} />
       <directionalLight position={{[5, 5, 5]}} intensity={{1}} castShadow />
 
-      {/* 3D Objects */}
+      {{/* 3D Objects */}}
       <mesh position={{[0, 1, 0]}} castShadow>
         <boxGeometry args={{[1, 1, 1]}} />
         <meshStandardMaterial color="orange" />
       </mesh>
 
-      {/* Ground */}
+      {{/* Ground */}}
       <mesh rotation={{[-Math.PI / 2, 0, 0]}} position={{[0, 0, 0]}} receiveShadow>
         <planeGeometry args={{[10, 10]}} />
         <meshStandardMaterial color="#808080" />
       </mesh>
 
-      {/* Environment */}
+      {{/* Environment */}}
       <Environment preset="city" />
       <ContactShadows position={{[0, 0, 0]}} opacity={{0.5}} scale={{10}} blur={{1}} far={{10}} />
 
-      {/* Camera Controls */}
+      {{/* Camera Controls */}}
       <OrbitControls makeDefault />
     </>
   )
