@@ -809,43 +809,43 @@ var {class_name} = pc.createScript('{script_name}');
 
 
 # Component type registry
-COMPONENT_TYPES: Dict[str, Dict] = {{
-    'basic': {{
+COMPONENT_TYPES: Dict[str, Dict] = {
+    'basic': {
         'name': 'Basic Component',
         'description': 'Simple component with lifecycle methods',
         'generator': generate_basic_component
-    }},
-    'interactive': {{
+    },
+    'interactive': {
         'name': 'Interactive Component',
         'description': 'Mouse and touch interaction handling',
         'generator': lambda name: generate_interactive_component(name)
-    }},
-    'animation': {{
+    },
+    'animation': {
         'name': 'Animation Controller',
         'description': 'Animation state management',
         'generator': lambda name: generate_animation_component(name)
-    }},
-    'physics': {{
+    },
+    'physics': {
         'name': 'Physics Component',
         'description': 'Physics-based component with forces',
         'generator': lambda name: generate_physics_component(name)
-    }},
-    'character': {{
+    },
+    'character': {
         'name': 'Character Controller',
         'description': 'Third-person character movement',
         'generator': lambda name: generate_character_controller(name)
-    }},
-    'camera': {{
+    },
+    'camera': {
         'name': 'Camera Controller',
         'description': 'Orbit camera with mouse control',
         'generator': lambda name: generate_camera_controller(name)
-    }},
-    'ui': {{
+    },
+    'ui': {
         'name': 'UI Component',
         'description': 'Screen-space UI element',
         'generator': lambda name: generate_ui_component(name)
-    }}
-}}
+    }
+}
 
 
 def interactive_mode():
