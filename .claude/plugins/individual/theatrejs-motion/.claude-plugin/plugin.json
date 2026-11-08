@@ -1,0 +1,23 @@
+{
+  "name": "theatrejs-motion",
+  "version": "1.0.0",
+  "description": "Design and sequence motion on the web with Theatre.js - a JavaScript animation library with a professional visual Studio editor. Use when building keyframed animations, cinematic sequences, scroll-driven motion, or when sequencing Three.js and React Three Fiber scenes with an on-canvas timeline editor. Triggers on tasks involving Theatre.js, @theatre/core, @theatre/studio, @theatre/r3f, sheets, sheet objects, sequences, keyframes, visual animation editing, editable 3D cameras/meshes, or persisting animation state as JSON. Alternative to hand-coding GSAP timelines when a visual, keyframe-based workflow and reusable animation state are preferred.",
+  "author": "Claude Design Skillstack",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/freshtechbro/claudedesignskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freshtechbro/claudedesignskills.git"
+  },
+  "keywords": [
+    "theatrejs",
+    "animation",
+    "sequencing",
+    "keyframes",
+    "motion-design"
+  ],
+  "category": "animation",
+  "skills": "skills/",
+  "commands": "commands/",
+  "agents": "agents/"
+}

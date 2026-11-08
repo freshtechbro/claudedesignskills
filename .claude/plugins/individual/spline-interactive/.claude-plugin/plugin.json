@@ -1,0 +1,22 @@
+{
+  "name": "spline-interactive",
+  "version": "1.0.0",
+  "description": "Browser-based 3D design tool with visual editor, animation, and web export. Use this skill when creating 3D scenes without code, designing interactive web experiences, prototyping 3D UI, exporting to React/web, or building designer-friendly 3D content. Triggers on tasks involving Spline, no-code 3D, visual 3D editor, 3D animation, state-based interactions, React Spline integration, or scene export. Alternative to Three.js for designers who prefer visual tools over code.",
+  "author": "Claude Design Skillstack",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/freshtechbro/claudedesignskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freshtechbro/claudedesignskills.git"
+  },
+  "keywords": [
+    "spline",
+    "no-code",
+    "3d",
+    "visual-editor"
+  ],
+  "category": "3d-authoring",
+  "skills": "skills/",
+  "commands": "commands/",
+  "agents": "agents/"
+}

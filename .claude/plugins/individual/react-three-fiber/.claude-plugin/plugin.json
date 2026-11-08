@@ -1,0 +1,23 @@
+{
+  "name": "react-three-fiber",
+  "version": "1.0.0",
+  "description": "Build declarative 3D scenes with React Three Fiber (R3F) - a React renderer for Three.js. Use when building interactive 3D experiences in React applications with component-based architecture, state management, and reusable abstractions. Ideal for product configurators, portfolios, games, data visualization, and immersive web experiences.",
+  "author": "Claude Design Skillstack",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/freshtechbro/claudedesignskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freshtechbro/claudedesignskills.git"
+  },
+  "keywords": [
+    "react",
+    "threejs",
+    "3d",
+    "r3f",
+    "webgl"
+  ],
+  "category": "3d-graphics",
+  "skills": "skills/",
+  "commands": "commands/",
+  "agents": "agents/"
+}

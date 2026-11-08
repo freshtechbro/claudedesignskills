@@ -1,0 +1,113 @@
+{
+  "exportPresets": [
+    {
+      "name": "ThreeJS_Standard",
+      "maps": [
+        {
+          "fileName": "$textureSet_color",
+          "channels": [
+            {
+              "destChannel": "R",
+              "srcChannel": "R",
+              "srcMapType": "documentMap",
+              "srcMapName": "baseColor"
+            },
+            {
+              "destChannel": "G",
+              "srcChannel": "G",
+              "srcMapType": "documentMap",
+              "srcMapName": "baseColor"
+            },
+            {
+              "destChannel": "B",
+              "srcChannel": "B",
+              "srcMapType": "documentMap",
+              "srcMapName": "baseColor"
+            }
+          ],
+          "parameters": {
+            "fileFormat": "jpeg",
+            "bitDepth": "8",
+            "sizeLog2": 10
+          }
+        },
+        {
+          "fileName": "$textureSet_normal",
+          "channels": [
+            {
+              "destChannel": "R",
+              "srcChannel": "R",
+              "srcMapType": "documentMap",
+              "srcMapName": "normal"
+            },
+            {
+              "destChannel": "G",
+              "srcChannel": "G",
+              "srcMapType": "documentMap",
+              "srcMapName": "normal"
+            },
+            {
+              "destChannel": "B",
+              "srcChannel": "B",
+              "srcMapType": "documentMap",
+              "srcMapName": "normal"
+            }
+          ],
+          "parameters": {
+            "fileFormat": "png",
+            "bitDepth": "8",
+            "sizeLog2": 10
+          }
+        },
+        {
+          "fileName": "$textureSet_ao",
+          "channels": [
+            {
+              "destChannel": "R",
+              "srcChannel": "R",
+              "srcMapType": "documentMap",
+              "srcMapName": "ambientOcclusion"
+            }
+          ],
+          "parameters": {
+            "fileFormat": "png",
+            "bitDepth": "8",
+            "sizeLog2": 10
+          }
+        },
+        {
+          "fileName": "$textureSet_metalness",
+          "channels": [
+            {
+              "destChannel": "R",
+              "srcChannel": "R",
+              "srcMapType": "documentMap",
+              "srcMapName": "metallic"
+            }
+          ],
+          "parameters": {
+            "fileFormat": "png",
+            "bitDepth": "8",
+            "sizeLog2": 10
+          }
+        },
+        {
+          "fileName": "$textureSet_roughness",
+          "channels": [
+            {
+              "destChannel": "R",
+              "srcChannel": "R",
+              "srcMapType": "documentMap",
+              "srcMapName": "roughness"
+            }
+          ],
+          "parameters": {
+            "fileFormat": "png",
+            "bitDepth": "8",
+            "sizeLog2": 10
+          }
+        }
+      ]
+    }
+  ]
+}

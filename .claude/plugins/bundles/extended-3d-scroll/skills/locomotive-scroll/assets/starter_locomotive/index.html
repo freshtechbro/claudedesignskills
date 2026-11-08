@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Locomotive Scroll Starter</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4/dist/locomotive-scroll.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Fixed Navigation (outside scroll container) -->
+  <nav class="nav">
+    <div class="nav-container">
+      <a href="#" class="logo">Locomotive</a>
+      <div class="nav-links">
+        <a href="#hero">Home</a>
+        <a href="#parallax">Parallax</a>
+        <a href="#sticky">Sticky</a>
+        <a href="#horizontal">Horizontal</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Scroll Container -->
+  <div data-scroll-container>
+
+    <!-- Hero Section -->
+    <section data-scroll-section class="hero" id="hero">
+      <h1 data-scroll data-scroll-speed="2" data-scroll-id="hero-title">
+        Locomotive Scroll
+      </h1>
+      <p data-scroll data-scroll-speed="1" data-scroll-delay="0.1">
+        Premium smooth scrolling experience
+      </p>
+      <div data-scroll data-scroll-speed="0.5" class="hero-bg"></div>
+    </section>
+
+    <!-- Parallax Section -->
+    <section data-scroll-section class="parallax-section" id="parallax">
+      <h2 data-scroll data-scroll-speed="1">Parallax Effects</h2>
+
+      <div class="parallax-container">
+        <!-- Background layer (slow) -->
+        <div
+          data-scroll
+          data-scroll-speed="0.5"
+          class="parallax-layer layer-bg"
+        >
+          Background Layer
+        </div>
+
+        <!-- Middle layer (normal) -->
+        <div
+          data-scroll
+          data-scroll-speed="1"
+          class="parallax-layer layer-mid"
+        >
+          Middle Layer
+        </div>
+
+        <!-- Foreground layer (fast) -->
+        <div
+          data-scroll
+          data-scroll-speed="3"
+          class="parallax-layer layer-fg"
+        >
+          Foreground Layer
+        </div>
+
+        <!-- Reverse parallax -->
+        <div
+          data-scroll
+          data-scroll-speed="-2"
+          class="parallax-layer layer-reverse"
+        >
+          Reverse Layer
+        </div>
+      </div>
+    </section>
+
+    <!-- Sticky Section -->
+    <section data-scroll-section class="sticky-section" id="sticky">
+      <h2 data-scroll>Sticky Elements</h2>
+
+      <div class="sticky-container">
+        <div
+          data-scroll
+          data-scroll-sticky
+          data-scroll-target=".sticky-container"
+          class="sticky-element"
+        >
+          <h3>I'm Sticky!</h3>
+          <p>I stick while the section scrolls</p>
+        </div>
+
+        <div class="sticky-content">
+          <p data-scroll>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <p data-scroll>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p data-scroll>Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+          <p data-scroll>Duis aute irure dolor in reprehenderit in voluptate velit esse.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Horizontal Scroll Section (requires JavaScript setup) -->
+    <section data-scroll-section class="horizontal-section" id="horizontal">
+      <h2 data-scroll>Scroll-Triggered Elements</h2>
+
+      <div class="grid">
+        <div
+          data-scroll
+          data-scroll-call="fadeIn"
+          data-scroll-repeat
+          class="card"
+        >
+          <h3>Card 1</h3>
+          <p>Triggers callback on scroll</p>
+        </div>
+
+        <div
+          data-scroll
+          data-scroll-offset="20%"
+          class="card"
+        >
+          <h3>Card 2</h3>
+          <p>Custom trigger offset</p>
+        </div>
+
+        <div
+          data-scroll
+          data-scroll-class="is-visible"
+          class="card"
+        >
+          <h3>Card 3</h3>
+          <p>Custom in-view class</p>
+        </div>
+
+        <div
+          data-scroll
+          data-scroll-id="special-card"
+          class="card"
+        >
+          <h3>Card 4</h3>
+          <p>Tracked by JavaScript</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer data-scroll-section class="footer">
+      <p data-scroll>© 2025 Locomotive Scroll Starter</p>
+      <p data-scroll data-scroll-speed="2">Built with Locomotive Scroll</p>
+    </footer>
+
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

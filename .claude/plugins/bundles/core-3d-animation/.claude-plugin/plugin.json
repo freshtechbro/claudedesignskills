@@ -1,0 +1,31 @@
+{
+  "name": "core-3d-animation",
+  "version": "1.0.0",
+  "description": "Complete core 3D and animation stack with Three.js, GSAP, React Three Fiber, Framer Motion, and Babylon.js",
+  "author": "Claude Design Skillstack",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/freshtechbro/claudedesignskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freshtechbro/claudedesignskills.git"
+  },
+  "keywords": [
+    "bundle",
+    "3d",
+    "animation",
+    "core",
+    "complete-stack"
+  ],
+  "category": "bundle",
+  "bundle": true,
+  "includes": [
+    "threejs-webgl",
+    "gsap-scrolltrigger",
+    "react-three-fiber",
+    "motion-framer",
+    "babylonjs-engine"
+  ],
+  "skills": "skills/",
+  "commands": "commands/",
+  "agents": "agents/"
+}

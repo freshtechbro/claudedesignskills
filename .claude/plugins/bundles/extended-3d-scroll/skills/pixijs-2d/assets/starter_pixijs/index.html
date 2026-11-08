@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixiJS Starter</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- UI Overlay -->
+    <div id="ui-overlay">
+        <div id="info-panel">
+            <h1>PixiJS Starter</h1>
+            <p>High-performance 2D rendering</p>
+        </div>
+
+        <div id="stats-panel">
+            <div class="stat">
+                <span class="label">FPS:</span>
+                <span id="fps">--</span>
+            </div>
+            <div class="stat">
+                <span class="label">Sprites:</span>
+                <span id="sprite-count">--</span>
+            </div>
+            <div class="stat">
+                <span class="label">Draw Calls:</span>
+                <span id="draw-calls">--</span>
+            </div>
+        </div>
+
+        <div id="controls-panel">
+            <button id="toggle-stats">Toggle Stats</button>
+            <button id="add-sprites">Add Sprites</button>
+            <button id="clear-sprites">Clear</button>
+        </div>
+    </div>
+
+    <!-- PixiJS CDN -->
+    <script src="https://pixijs.download/release/pixi.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "scroll-reveal-libraries",
+  "version": "1.0.0",
+  "description": "Simple scroll-triggered reveal animations using AOS (Animate On Scroll). Use this skill when building marketing pages, landing pages, or content-heavy sites requiring basic fade/slide effects without complex animation orchestration. Triggers on tasks involving scroll animations, scroll-triggered reveals, AOS, simple animations, or basic scroll effects. Alternative to GSAP ScrollTrigger and Locomotive Scroll for simpler use cases. Compare with motion-framer for React-specific animations.",
+  "author": "Claude Design Skillstack",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/freshtechbro/claudedesignskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freshtechbro/claudedesignskills.git"
+  },
+  "keywords": [
+    "aos",
+    "scroll-reveal",
+    "animation",
+    "scroll"
+  ],
+  "category": "scroll",
+  "skills": "skills/",
+  "commands": "commands/",
+  "agents": "agents/"
+}

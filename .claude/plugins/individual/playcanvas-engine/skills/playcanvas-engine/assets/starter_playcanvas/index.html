@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>PlayCanvas Starter Project</title>
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- PlayCanvas Engine -->
+    <script src="https://code.playcanvas.com/playcanvas-stable.min.js"></script>
+</head>
+<body>
+    <!-- Canvas Container -->
+    <div id="app">
+        <canvas id="application-canvas"></canvas>
+
+        <!-- Loading Screen -->
+        <div id="loading-screen">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+
+        <!-- UI Overlay -->
+        <div id="ui-overlay">
+            <div id="info-panel">
+                <h1>PlayCanvas Starter</h1>
+                <p>Use mouse to rotate camera • Scroll to zoom</p>
+            </div>
+
+            <div id="stats-panel">
+                <div class="stat">
+                    <span class="label">FPS:</span>
+                    <span id="fps">--</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Draw Calls:</span>
+                    <span id="draw-calls">--</span>
+                </div>
+                <div class="stat">
+                    <span class="label">Triangles:</span>
+                    <span id="triangles">--</span>
+                </div>
+            </div>
+
+            <div id="controls-panel">
+                <button id="toggle-stats">Toggle Stats</button>
+                <button id="toggle-wireframe">Wireframe</button>
+                <button id="reset-camera">Reset Camera</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Application Scripts -->
+    <script src="scripts/input-manager.js"></script>
+    <script src="scripts/camera-controller.js"></script>
+    <script src="scripts/app.js"></script>
+
+    <script>
+        // Initialize application when DOM is ready
+        window.addEventListener('DOMContentLoaded', () => {
+            initApp();
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{
+  "name": "pixijs-2d",
+  "version": "1.0.0",
+  "description": "Fast, lightweight 2D rendering engine for creating interactive graphics, particle effects, and canvas-based applications using WebGL/WebGPU. Use this skill when building 2D games, particle systems, interactive canvases, sprite animations, or UI overlays on 3D scenes. Triggers on tasks involving PixiJS, 2D rendering, sprite sheets, particle effects, filters, or high-performance canvas graphics. Alternative to Canvas2D with WebGL acceleration for rendering thousands of sprites at 60 FPS.",
+  "author": "Claude Design Skillstack",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/freshtechbro/claudedesignskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freshtechbro/claudedesignskills.git"
+  },
+  "keywords": [
+    "pixijs",
+    "2d",
+    "webgl",
+    "canvas",
+    "sprites"
+  ],
+  "category": "2d-graphics",
+  "skills": "skills/",
+  "commands": "commands/",
+  "agents": "agents/"
+}

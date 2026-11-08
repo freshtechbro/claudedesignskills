@@ -57,6 +57,9 @@ SKILL_CATEGORIES = {
     # Meta-Skills (2)
     "web3d-integration-patterns": {"category": "integration", "tags": ["integration", "patterns", "3d", "animation"]},
     "modern-web-design": {"category": "design", "tags": ["design", "trends", "ux", "web"]},
+
+    # Additional
+    "theatrejs-motion": {"category": "animation", "tags": ["theatrejs", "animation", "sequencing", "keyframes", "motion-design"]},
 }
 
 # Command templates for different skill types
@@ -564,6 +567,7 @@ This agent has access to:
             "spline-interactive": "Spline",
             "rive-interactive": "Rive",
             "substance-3d-texturing": "Substance 3D",
+            "theatrejs-motion": "Theatre.js",
         }
 
         return special_cases.get(self.skill_name, self.skill_name.replace('-', ' ').title())

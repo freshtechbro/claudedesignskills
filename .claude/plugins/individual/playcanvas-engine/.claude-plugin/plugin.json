@@ -1,0 +1,22 @@
+{
+  "name": "playcanvas-engine",
+  "version": "1.0.0",
+  "description": "Lightweight WebGL/WebGPU game engine with entity-component architecture and visual editor integration. Use this skill when building browser-based games, interactive 3D applications, or performance-critical web experiences. Triggers on tasks involving PlayCanvas, entity-component systems, game engine development, WebGL games, 3D browser applications, editor-first workflows, or real-time 3D rendering. Alternative to Three.js with game-specific features and integrated development environment.",
+  "author": "Claude Design Skillstack",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/freshtechbro/claudedesignskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freshtechbro/claudedesignskills.git"
+  },
+  "keywords": [
+    "playcanvas",
+    "webgl",
+    "game-engine",
+    "3d"
+  ],
+  "category": "3d-graphics",
+  "skills": "skills/",
+  "commands": "commands/",
+  "agents": "agents/"
+}

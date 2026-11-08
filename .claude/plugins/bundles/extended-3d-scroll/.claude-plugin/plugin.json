@@ -1,0 +1,32 @@
+{
+  "name": "extended-3d-scroll",
+  "version": "1.0.0",
+  "description": "Extended 3D graphics and smooth scroll stack with A-Frame, lightweight effects, PlayCanvas, PixiJS, Locomotive Scroll, and Barba.js",
+  "author": "Claude Design Skillstack",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/freshtechbro/claudedesignskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freshtechbro/claudedesignskills.git"
+  },
+  "keywords": [
+    "bundle",
+    "3d",
+    "scroll",
+    "effects",
+    "transitions"
+  ],
+  "category": "bundle",
+  "bundle": true,
+  "includes": [
+    "aframe-webxr",
+    "lightweight-3d-effects",
+    "playcanvas-engine",
+    "pixijs-2d",
+    "locomotive-scroll",
+    "barba-js"
+  ],
+  "skills": "skills/",
+  "commands": "commands/",
+  "agents": "agents/"
+}
