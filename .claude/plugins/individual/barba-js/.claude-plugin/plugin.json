@@ -1,0 +1,22 @@
+{
+  "name": "barba-js",
+  "version": "1.0.0",
+  "description": "Page transitions library for creating fluid, smooth transitions between website pages. Use this skill when implementing page transitions, creating SPA-like experiences, adding animated route changes, or building websites with smooth navigation. Triggers on tasks involving Barba.js, page transitions, routing, view management, transition hooks, GSAP integration, or smooth page navigation. Works with gsap-scrolltrigger for transition animations.",
+  "author": "Claude Design Skillstack",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/freshtechbro/claudedesignskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freshtechbro/claudedesignskills.git"
+  },
+  "keywords": [
+    "barba",
+    "page-transitions",
+    "routing",
+    "spa"
+  ],
+  "category": "transitions",
+  "skills": "skills/",
+  "commands": "commands/",
+  "agents": "agents/"
+}

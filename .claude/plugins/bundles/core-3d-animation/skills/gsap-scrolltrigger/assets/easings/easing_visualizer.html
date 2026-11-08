@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSAP Easing Visualizer</title>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      min-height: 100vh;
+      padding: 40px 20px;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 40px;
+      color: white;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    .controls {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+      margin-bottom: 40px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .control-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 8px;
+      color: #555;
+    }
+
+    input, select, button {
+      padding: 12px;
+      border: 2px solid #e0e0e0;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-family: inherit;
+      transition: border-color 0.3s;
+    }
+
+    input:focus, select:focus {
+      outline: none;
+      border-color: #667eea;
+    }
+
+    button {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    .easing-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .easing-card {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .easing-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+    }
+
+    .easing-name {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #764ba2;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .copy-btn {
+      padding: 5px 10px;
+      font-size: 0.8rem;
+      background: #f0f0f0;
+      color: #333;
+      border: 1px solid #ddd;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .copy-btn:hover {
+      background: #e0e0e0;
+    }
+
+    .track {
+      width: 100%;
+      height: 60px;
+      background: #f5f5f5;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .box {
+      width: 50px;
+      height: 50px;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      border-radius: 8px;
+      position: absolute;
+      left: 5px;
+      top: 5px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    }
+
+    .curve-preview {
+      width: 100%;
+      height: 80px;
+      background: #fafafa;
+      border-radius: 8px;
+      position: relative;
+      border: 2px solid #e0e0e0;
+    }
+
+    .curve-line {
+      stroke: #764ba2;
+      stroke-width: 3;
+      fill: none;
+      filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
+    }
+
+    .use-case {
+      margin-top: 15px;
+      padding: 12px;
+      background: #f9f9f9;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: #666;
+      border-left: 4px solid #667eea;
+    }
+
+    .action-bar {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .action-bar button {
+      margin: 0 10px;
+      padding: 15px 30px;
+      font-size: 1.1rem;
+    }
+
+    .comparison-mode {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin-top: 30px;
+    }
+
+    .comparison-card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2rem;
+      }
+
+      .controls {
+        grid-template-columns: 1fr;
+      }
+
+      .easing-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .copied-toast {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: #4caf50;
+      color: white;
+      padding: 15px 25px;
+      border-radius: 8px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.3s, transform 0.3s;
+      pointer-events: none;
+      z-index: 1000;
+    }
+
+    .copied-toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>⚡ GSAP Easing Visualizer</h1>
+      <p class="subtitle">Explore and compare GSAP easing functions</p>
+    </header>
+
+    <div class="controls">
+      <div class="control-group">
+        <label for="duration">Duration (seconds)</label>
+        <input type="number" id="duration" value="1.5" step="0.1" min="0.1" max="5">
+      </div>
+
+      <div class="control-group">
+        <label for="distance">Distance (pixels)</label>
+        <input type="number" id="distance" value="280" step="10" min="50" max="500">
+      </div>
+
+      <div class="control-group">
+        <label for="category">Category Filter</label>
+        <select id="category">
+          <option value="all">All Easings</option>
+          <option value="power">Power (Most Common)</option>
+          <option value="special">Special (Back, Elastic, Bounce)</option>
+          <option value="other">Other (Circ, Expo, Sine)</option>
+        </select>
+      </div>
+
+      <div class="control-group">
+        <button id="play-all">▶ Play All</button>
+      </div>
+    </div>
+
+    <div class="action-bar">
+      <button id="reset-all">↻ Reset All</button>
+      <button id="toggle-curves">📊 Toggle Curves</button>
+    </div>
+
+    <div id="easing-container" class="easing-grid"></div>
+
+    <div class="copied-toast" id="toast">Copied to clipboard!</div>
+  </div>
+
+  <script>
+    // Easing functions with metadata
+    const easings = [
+      // Power easings
+      { name: "none", category: "power", useCase: "Constant speed, scroll-driven animations" },
+      { name: "power1.out", category: "power", useCase: "Subtle UI transitions, tooltips" },
+      { name: "power2.out", category: "power", useCase: "⭐ Default choice for most animations" },
+      { name: "power3.out", category: "power", useCase: "Hero sections, dramatic reveals" },
+      { name: "power4.out", category: "power", useCase: "Full-screen transitions, maximum impact" },
+      { name: "power1.in", category: "power", useCase: "Rare: elements accelerating off-screen" },
+      { name: "power2.in", category: "power", useCase: "Rare: strong acceleration" },
+      { name: "power1.inOut", category: "power", useCase: "Smooth start and end" },
+      { name: "power2.inOut", category: "power", useCase: "Balanced animation both ends" },
+      { name: "power3.inOut", category: "power", useCase: "Strong smooth both ends" },
+
+      // Special easings
+      { name: "back.out(1.7)", category: "special", useCase: "Playful buttons, fun micro-interactions" },
+      { name: "back.out(2.5)", category: "special", useCase: "Exaggerated overshoot" },
+      { name: "back.in(1.7)", category: "special", useCase: "Element backs up before leaving" },
+      { name: "back.inOut(1.7)", category: "special", useCase: "Overshoot both ends" },
+      { name: "elastic.out(1, 0.3)", category: "special", useCase: "Spring effect, notification badges" },
+      { name: "elastic.in(1, 0.3)", category: "special", useCase: "Rare: elastic entrance" },
+      { name: "bounce.out", category: "special", useCase: "Elements dropping into place" },
+      { name: "bounce.in", category: "special", useCase: "Bouncing ball entering" },
+
+      // Other easings
+      { name: "circ.out", category: "other", useCase: "Fast snappy movements, Material Design" },
+      { name: "circ.in", category: "other", useCase: "Sharp acceleration" },
+      { name: "circ.inOut", category: "other", useCase: "Sharp both ends" },
+      { name: "expo.out", category: "other", useCase: "Dramatic zoom effects, cinematic" },
+      { name: "expo.in", category: "other", useCase: "Extremely slow start" },
+      { name: "expo.inOut", category: "other", useCase: "Intense page transitions" },
+      { name: "sine.out", category: "other", useCase: "Subtle parallax, ambient effects" },
+      { name: "sine.in", category: "other", useCase: "Very gentle acceleration" },
+      { name: "sine.inOut", category: "other", useCase: "Barely noticeable animations" },
+    ];
+
+    let duration = 1.5;
+    let distance = 280;
+    let showCurves = true;
+
+    const container = document.getElementById('easing-container');
+    const durationInput = document.getElementById('duration');
+    const distanceInput = document.getElementById('distance');
+    const categorySelect = document.getElementById('category');
+    const playAllBtn = document.getElementById('play-all');
+    const resetAllBtn = document.getElementById('reset-all');
+    const toggleCurvesBtn = document.getElementById('toggle-curves');
+    const toast = document.getElementById('toast');
+
+    // Generate easing cards
+    function renderEasings() {
+      const category = categorySelect.value;
+      const filtered = easings.filter(e =>
+        category === 'all' || e.category === category
+      );
+
+      container.innerHTML = '';
+
+      filtered.forEach((easing, index) => {
+        const card = document.createElement('div');
+        card.className = 'easing-card';
+        card.innerHTML = `
+          <div class="easing-name">
+            <span>${easing.name}</span>
+            <button class="copy-btn" data-ease="${easing.name}">Copy</button>
+          </div>
+          <div class="track" data-index="${index}">
+            <div class="box"></div>
+          </div>
+          <div class="curve-preview" style="${showCurves ? '' : 'display: none;'}">
+            <svg width="100%" height="100%" viewBox="0 0 100 80" preserveAspectRatio="none">
+              <path class="curve-line" d="M 5 75 ${generateCurvePath(easing.name)}" />
+            </svg>
+          </div>
+          <div class="use-case">
+            <strong>Use case:</strong> ${easing.useCase}
+          </div>
+        `;
+
+        container.appendChild(card);
+
+        // Add copy functionality
+        card.querySelector('.copy-btn').addEventListener('click', () => {
+          copyToClipboard(easing.name);
+        });
+
+        // Add click to animate
+        card.querySelector('.track').addEventListener('click', () => {
+          animateBox(index, easing.name);
+        });
+      });
+    }
+
+    // Generate approximate curve path for visualization
+    function generateCurvePath(easeName) {
+      // Simplified curve representations
+      const curves = {
+        "none": "L 95 5",
+        "power1.out": "Q 50 40, 95 5",
+        "power2.out": "Q 50 50, 95 5",
+        "power3.out": "Q 50 60, 95 5",
+        "power4.out": "Q 50 65, 95 5",
+        "power1.in": "Q 50 40, 95 75",
+        "power2.in": "Q 50 30, 95 75",
+        "back.out(1.7)": "Q 50 -10, 95 5",
+        "back.out(2.5)": "Q 50 -20, 95 5",
+        "back.in(1.7)": "Q 50 90, 95 75",
+        "back.inOut(1.7)": "Q 25 -10, 50 40 T 95 5",
+        "elastic.out(1, 0.3)": "Q 30 -5, 50 45 T 70 5 T 95 5",
+        "bounce.out": "L 40 30 L 60 10 L 75 5 L 95 5",
+        "circ.out": "Q 30 50, 95 5",
+        "expo.out": "Q 20 60, 95 5",
+        "sine.out": "Q 50 35, 95 5",
+      };
+
+      return curves[easeName] || "L 95 5";
+    }
+
+    // Animate individual box
+    function animateBox(index, easeName) {
+      const track = document.querySelector(`.track[data-index="${index}"]`);
+      const box = track.querySelector('.box');
+
+      gsap.fromTo(box,
+        { x: 0 },
+        {
+          x: distance,
+          duration: duration,
+          ease: easeName,
+          onComplete: () => {
+            gsap.to(box, { x: 0, duration: 0.3, ease: "power1.in" });
+          }
+        }
+      );
+    }
+
+    // Play all animations
+    function playAll() {
+      const tracks = document.querySelectorAll('.track');
+      tracks.forEach((track, index) => {
+        const box = track.querySelector('.box');
+        const easeName = easings[index].name;
+
+        gsap.fromTo(box,
+          { x: 0 },
+          {
+            x: distance,
+            duration: duration,
+            ease: easeName,
+            delay: index * 0.05,
+            onComplete: () => {
+              gsap.to(box, { x: 0, duration: 0.3, ease: "power1.in" });
+            }
+          }
+        );
+      });
+    }
+
+    // Reset all animations
+    function resetAll() {
+      const boxes = document.querySelectorAll('.box');
+      gsap.killTweensOf(boxes);
+      gsap.set(boxes, { x: 0 });
+    }
+
+    // Copy to clipboard
+    function copyToClipboard(text) {
+      navigator.clipboard.writeText(`ease: "${text}"`).then(() => {
+        showToast();
+      });
+    }
+
+    function showToast() {
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2000);
+    }
+
+    // Event listeners
+    durationInput.addEventListener('input', (e) => {
+      duration = parseFloat(e.target.value);
+    });
+
+    distanceInput.addEventListener('input', (e) => {
+      distance = parseInt(e.target.value);
+    });
+
+    categorySelect.addEventListener('change', renderEasings);
+
+    playAllBtn.addEventListener('click', playAll);
+    resetAllBtn.addEventListener('click', resetAll);
+
+    toggleCurvesBtn.addEventListener('click', () => {
+      showCurves = !showCurves;
+      renderEasings();
+    });
+
+    // Initial render
+    renderEasings();
+  </script>
+</body>
+</html>

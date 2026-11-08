@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>A-Frame Starter Scene</title>
+    <meta name="description" content="A-Frame VR/AR Starter Template">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://aframe.io/releases/1.7.1/aframe.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <a-scene>
+      <!-- Assets -->
+      <a-assets>
+        <audio id="click-sound" src="https://cdn.aframe.io/360-image-gallery-boilerplate/audio/click.ogg"></audio>
+      </a-assets>
+
+      <!-- Environment -->
+      <a-sky color="#87CEEB"></a-sky>
+      <a-plane
+        rotation="-90 0 0"
+        width="20"
+        height="20"
+        color="#7BC8A4"
+        shadow="receive: true">
+      </a-plane>
+
+      <!-- Lighting -->
+      <a-entity light="type: ambient; color: #BBB; intensity: 0.6"></a-entity>
+      <a-entity
+        light="type: directional; color: #FFF; intensity: 0.5; castShadow: true"
+        position="5 10 5">
+      </a-entity>
+
+      <!-- Interactive Objects -->
+      <a-box
+        id="box1"
+        class="interactive"
+        position="-1 0.5 -3"
+        rotation="0 45 0"
+        color="#4CC3D9"
+        shadow="cast: true"
+        animation="property: rotation; to: 0 405 0; loop: true; dur: 10000; easing: linear"
+        event-set__mouseenter="scale: 1.2 1.2 1.2"
+        event-set__mouseleave="scale: 1 1 1"
+        sound="on: click; src: #click-sound">
+      </a-box>
+
+      <a-sphere
+        id="sphere1"
+        class="interactive"
+        position="0 1.25 -5"
+        radius="0.5"
+        color="#EF2D5E"
+        shadow="cast: true"
+        animation__position="property: position; to: 0 2 -5; dir: alternate; loop: true; dur: 2000; easing: easeInOutQuad"
+        event-set__click="color: orange"
+        sound="on: click; src: #click-sound">
+      </a-sphere>
+
+      <a-cylinder
+        id="cylinder1"
+        class="interactive"
+        position="1 0.75 -3"
+        radius="0.3"
+        height="1.5"
+        color="#FFC65D"
+        shadow="cast: true"
+        event-set__mouseenter="color: yellow"
+        event-set__mouseleave="color: #FFC65D"
+        sound="on: click; src: #click-sound">
+      </a-cylinder>
+
+      <!-- Camera -->
+      <a-camera position="0 1.6 0" look-controls wasd-controls>
+        <a-cursor
+          raycaster="objects: .interactive"
+          fuse="false">
+        </a-cursor>
+      </a-camera>
+    </a-scene>
+
+    <!-- Info Panel -->
+    <div id="info">
+      <strong>A-Frame Starter Scene</strong><br>
+      WASD - Move | Mouse - Look<br>
+      Click on objects to interact
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

@@ -1,21 +1,20 @@
 {
-  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
   "name": "claude-design-skillstack",
   "owner": {
     "name": "Claude Design Skillstack",
-    "email": "oladotun.olatunji@gmail.com",
     "url": "https://github.com/freshtechbro/claudedesignskills"
   },
   "metadata": {
     "description": "Professional design agency skillstack for 3D/WebGL, animation, and modern web development. Comprehensive collection covering Three.js, GSAP, React Three Fiber, Framer Motion, Babylon.js, and more. Includes 22 individual plugins + 5 category bundles.",
     "version": "1.0.0",
+    "pluginRoot": "./.claude/plugins",
     "homepage": "https://github.com/freshtechbro/claudedesignskills",
     "repository": "https://github.com/freshtechbro/claudedesignskills"
   },
   "plugins": [
     {
       "name": "aframe-webxr",
-      "source": "./plugins/individual/aframe-webxr",
+      "source": "./individual/aframe-webxr",
       "version": "1.0.0",
       "description": "Declarative web framework for building browser-based 3D, VR, and AR experiences using HTML and entity-component architecture. Use this skill when creating WebXR applications, VR experiences, AR experiences, 360-degree media viewers, or immersive web content with minimal JavaScript. Triggers on tasks involving A-Frame, WebXR, VR development, AR development, entity-component-system, declarative 3D, or HTML-based 3D scenes. Built on Three.js with accessible HTML-first approach.",
       "category": "3d-graphics",
@@ -26,15 +25,12 @@
         "ar",
         "3d"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "animated-component-libraries",
-      "source": "./plugins/individual/animated-component-libraries",
+      "source": "./individual/animated-component-libraries",
       "version": "1.0.0",
       "description": "Pre-built animated React component collections combining Magic UI (150+ TypeScript/Tailwind/Motion components) and React Bits (90+ minimal-dependency animated components). Use this skill when building landing pages, marketing sites, dashboards, or interactive UIs requiring pre-made animated components instead of hand-crafting animations. Triggers on tasks involving animated UI components, Magic UI, React Bits, shadcn/ui integration, Tailwind CSS components, or component library selection. Alternative to manually implementing animations with Framer Motion or GSAP.",
       "category": "components",
@@ -44,15 +40,12 @@
         "components",
         "animation"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "animejs",
-      "source": "./plugins/individual/animejs",
+      "source": "./individual/animejs",
       "version": "1.0.0",
       "description": "Versatile JavaScript animation engine for DOM, CSS, SVG, and JavaScript objects. Use when creating timeline-based animations, stagger effects, SVG morphing, keyframe sequences, or complex choreographed animations. Triggers on tasks involving Anime.js, timeline animations, staggered sequences, SVG path animations, morphing, or multi-step animation choreography. Alternative to GSAP for SVG-heavy animations and React-independent projects.",
       "category": "animation",
@@ -62,15 +55,12 @@
         "svg",
         "animation"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "babylonjs-engine",
-      "source": "./plugins/individual/babylonjs-engine",
+      "source": "./individual/babylonjs-engine",
       "version": "1.0.0",
       "description": "Comprehensive skill for Babylon.js 3D web rendering engine. Use this skill when building real-time 3D experiences, browser-based games, interactive visualizations, or immersive web applications. Triggers on tasks involving Babylon.js, 3D scenes, WebGL/WebGPU rendering, entity-component systems, physics simulations, PBR materials, shadow mapping, or 3D model loading. Alternative to Three.js with built-in editor integration and game engine features.",
       "category": "3d-graphics",
@@ -80,15 +70,12 @@
         "webgl",
         "game-engine"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "barba-js",
-      "source": "./plugins/individual/barba-js",
+      "source": "./individual/barba-js",
       "version": "1.0.0",
       "description": "Page transitions library for creating fluid, smooth transitions between website pages. Use this skill when implementing page transitions, creating SPA-like experiences, adding animated route changes, or building websites with smooth navigation. Triggers on tasks involving Barba.js, page transitions, routing, view management, transition hooks, GSAP integration, or smooth page navigation. Works with gsap-scrolltrigger for transition animations.",
       "category": "transitions",
@@ -98,15 +85,12 @@
         "routing",
         "spa"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "blender-web-pipeline",
-      "source": "./plugins/individual/blender-web-pipeline",
+      "source": "./individual/blender-web-pipeline",
       "version": "1.0.0",
       "description": "Blender to web export workflows for 3D models and animations. Use this skill when exporting Blender models to glTF for web, optimizing 3D assets for Three.js or Babylon.js, batch processing models with Python scripts, automating Blender workflows, or creating web-ready 3D pipelines. Triggers on tasks involving Blender glTF export, bpy scripting, 3D asset optimization, model compression, texture baking, or Blender automation. Exports models for threejs-webgl, react-three-fiber, and babylonjs-engine skills.",
       "category": "3d-authoring",
@@ -117,15 +101,12 @@
         "pipeline",
         "3d"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "gsap-scrolltrigger",
-      "source": "./plugins/individual/gsap-scrolltrigger",
+      "source": "./individual/gsap-scrolltrigger",
       "version": "1.0.0",
       "description": "Comprehensive skill for GSAP (GreenSock Animation Platform) and ScrollTrigger plugin. Use this skill when creating web animations, scroll-driven experiences, timelines, tweens, scroll-triggered animations, pinning, scrubbing, parallax effects, or animating DOM elements, SVG, Canvas, WebGL, or Three.js. Triggers on tasks involving GSAP, ScrollTrigger, smooth animations, scroll effects, or animation sequencing.",
       "category": "animation",
@@ -135,15 +116,12 @@
         "scroll",
         "scrolltrigger"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "lightweight-3d-effects",
-      "source": "./plugins/individual/lightweight-3d-effects",
+      "source": "./individual/lightweight-3d-effects",
       "version": "1.0.0",
       "description": "Lightweight 3D effects for decorative elements and micro-interactions using Zdog, Vanta.js, and Vanilla-Tilt.js. Use this skill when adding pseudo-3D illustrations, animated backgrounds, parallax tilt effects, decorative 3D elements, or subtle depth effects without heavy frameworks. Triggers on tasks involving Zdog pseudo-3D, Vanta.js backgrounds, Vanilla-Tilt parallax, card tilt effects, hero section animations, or lightweight landing page visuals. Ideal for performance-focused designs.",
       "category": "3d-graphics",
@@ -154,15 +132,12 @@
         "lightweight",
         "3d"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "locomotive-scroll",
-      "source": "./plugins/individual/locomotive-scroll",
+      "source": "./individual/locomotive-scroll",
       "version": "1.0.0",
       "description": "Comprehensive skill for Locomotive Scroll smooth scrolling library with parallax effects, viewport detection, and scroll-driven animations. Use this skill when implementing smooth scrolling experiences, creating parallax effects, building scroll-triggered animations, or developing immersive scrolling websites. Triggers on tasks involving Locomotive Scroll, smooth scrolling, parallax, scroll detection, scroll events, sticky elements, horizontal scrolling, or GSAP ScrollTrigger integration. Integrates with GSAP for advanced scroll-driven animations.",
       "category": "scroll",
@@ -172,15 +147,12 @@
         "parallax",
         "scroll"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "lottie-animations",
-      "source": "./plugins/individual/lottie-animations",
+      "source": "./individual/lottie-animations",
       "version": "1.0.0",
       "description": "After Effects animation rendering for web and React applications. Use this skill when implementing Lottie animations, JSON vector animations, interactive animated icons, micro-interactions, or loading animations. Triggers on tasks involving Lottie, lottie-web, lottie-react, dotLottie, After Effects JSON export, bodymovin, animated SVG alternatives, or designer-created animations. Complements GSAP ScrollTrigger and Framer Motion for scroll-driven and interactive animations.",
       "category": "animation",
@@ -190,15 +162,12 @@
         "json",
         "animation"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "modern-web-design",
-      "source": "./plugins/individual/modern-web-design",
+      "source": "./individual/modern-web-design",
       "version": "1.0.0",
       "description": "Modern web design trends, principles, and implementation patterns for 2024-2025. Use this skill when designing websites, creating interactive experiences, implementing design systems, ensuring accessibility, or building performance-first interfaces. Triggers on tasks involving modern design trends, micro-interactions, scrollytelling, bold minimalism, cursor UX, glassmorphism, accessibility compliance, performance optimization, or design system architecture. References animation skills (GSAP, Framer Motion, React Spring), 3D skills (Three.js, R3F, Babylon.js), and component libraries for implementation guidance.",
       "category": "design",
@@ -208,15 +177,12 @@
         "ux",
         "web"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "motion-framer",
-      "source": "./plugins/individual/motion-framer",
+      "source": "./individual/motion-framer",
       "version": "1.0.0",
       "description": "Modern animation library for React and JavaScript. Create smooth, production-ready animations with motion components, variants, gestures (hover/tap/drag), layout animations, AnimatePresence exit animations, spring physics, and scroll-based effects. Use when building interactive UI components, micro-interactions, page transitions, or complex animation sequences.",
       "category": "animation",
@@ -226,15 +192,12 @@
         "react",
         "animation"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "pixijs-2d",
-      "source": "./plugins/individual/pixijs-2d",
+      "source": "./individual/pixijs-2d",
       "version": "1.0.0",
       "description": "Fast, lightweight 2D rendering engine for creating interactive graphics, particle effects, and canvas-based applications using WebGL/WebGPU. Use this skill when building 2D games, particle systems, interactive canvases, sprite animations, or UI overlays on 3D scenes. Triggers on tasks involving PixiJS, 2D rendering, sprite sheets, particle effects, filters, or high-performance canvas graphics. Alternative to Canvas2D with WebGL acceleration for rendering thousands of sprites at 60 FPS.",
       "category": "2d-graphics",
@@ -245,15 +208,12 @@
         "canvas",
         "sprites"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "playcanvas-engine",
-      "source": "./plugins/individual/playcanvas-engine",
+      "source": "./individual/playcanvas-engine",
       "version": "1.0.0",
       "description": "Lightweight WebGL/WebGPU game engine with entity-component architecture and visual editor integration. Use this skill when building browser-based games, interactive 3D applications, or performance-critical web experiences. Triggers on tasks involving PlayCanvas, entity-component systems, game engine development, WebGL games, 3D browser applications, editor-first workflows, or real-time 3D rendering. Alternative to Three.js with game-specific features and integrated development environment.",
       "category": "3d-graphics",
@@ -263,15 +223,12 @@
         "game-engine",
         "3d"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "react-spring-physics",
-      "source": "./plugins/individual/react-spring-physics",
+      "source": "./individual/react-spring-physics",
       "version": "1.0.0",
       "description": "Physics-based animation library combining React Spring (spring dynamics, gesture integration, 60fps animations) and Popmotion (low-level composable animation utilities, reactive streams). Use when building fluid, natural-feeling UI animations, gesture-driven interfaces, physics simulations, or spring-loaded interactions. Triggers on tasks involving React Spring hooks, spring physics, inertia scrolling, physics-based motion, animation composition, or natural UI movements. Alternative physics approach to motion-framer for more physically accurate animations.",
       "category": "animation",
@@ -281,15 +238,12 @@
         "animation",
         "spring"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "react-three-fiber",
-      "source": "./plugins/individual/react-three-fiber",
+      "source": "./individual/react-three-fiber",
       "version": "1.0.0",
       "description": "Build declarative 3D scenes with React Three Fiber (R3F) - a React renderer for Three.js. Use when building interactive 3D experiences in React applications with component-based architecture, state management, and reusable abstractions. Ideal for product configurators, portfolios, games, data visualization, and immersive web experiences.",
       "category": "3d-graphics",
@@ -300,15 +254,12 @@
         "r3f",
         "webgl"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "rive-interactive",
-      "source": "./plugins/individual/rive-interactive",
+      "source": "./individual/rive-interactive",
       "version": "1.0.0",
       "description": "State machine-based vector animation with runtime interactivity and web integration. Use this skill when creating interactive animations, state-driven UI, animated components with logic, or designer-created animations with runtime control. Triggers on tasks involving Rive, state machines, interactive vector animations, animation with input handling, ViewModel data binding, or React Rive integration. Alternative to Lottie for animations requiring state machines and two-way interactivity.",
       "category": "animation",
@@ -318,15 +269,12 @@
         "state-machine",
         "animation"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "scroll-reveal-libraries",
-      "source": "./plugins/individual/scroll-reveal-libraries",
+      "source": "./individual/scroll-reveal-libraries",
       "version": "1.0.0",
       "description": "Simple scroll-triggered reveal animations using AOS (Animate On Scroll). Use this skill when building marketing pages, landing pages, or content-heavy sites requiring basic fade/slide effects without complex animation orchestration. Triggers on tasks involving scroll animations, scroll-triggered reveals, AOS, simple animations, or basic scroll effects. Alternative to GSAP ScrollTrigger and Locomotive Scroll for simpler use cases. Compare with motion-framer for React-specific animations.",
       "category": "scroll",
@@ -336,15 +284,12 @@
         "animation",
         "scroll"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "spline-interactive",
-      "source": "./plugins/individual/spline-interactive",
+      "source": "./individual/spline-interactive",
       "version": "1.0.0",
       "description": "Browser-based 3D design tool with visual editor, animation, and web export. Use this skill when creating 3D scenes without code, designing interactive web experiences, prototyping 3D UI, exporting to React/web, or building designer-friendly 3D content. Triggers on tasks involving Spline, no-code 3D, visual 3D editor, 3D animation, state-based interactions, React Spline integration, or scene export. Alternative to Three.js for designers who prefer visual tools over code.",
       "category": "3d-authoring",
@@ -354,15 +299,12 @@
         "3d",
         "visual-editor"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "substance-3d-texturing",
-      "source": "./plugins/individual/substance-3d-texturing",
+      "source": "./individual/substance-3d-texturing",
       "version": "1.0.0",
       "description": "Comprehensive skill for Adobe Substance 3D Painter texturing and material creation workflow. Use this skill when creating PBR materials, exporting textures for web/game engines, optimizing 3D assets for real-time rendering, or automating texture workflows. Triggers on tasks involving Substance 3D Painter, PBR texturing, material creation, texture export for Three.js, Babylon.js, Unity, Unreal, glTF optimization, or Python API automation. Creates optimized textures for threejs-webgl, react-three-fiber, and babylonjs-engine materials.",
       "category": "3d-authoring",
@@ -372,15 +314,28 @@
         "pbr",
         "materials"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "author": "Claude Design Skillstack",
+      "license": "Apache-2.0"
+    },
+    {
+      "name": "theatrejs-motion",
+      "source": "./individual/theatrejs-motion",
+      "version": "1.0.0",
+      "description": "Design and sequence motion on the web with Theatre.js - a JavaScript animation library with a professional visual Studio editor. Use when building keyframed animations, cinematic sequences, scroll-driven motion, or when sequencing Three.js and React Three Fiber scenes with an on-canvas timeline editor. Triggers on tasks involving Theatre.js, @theatre/core, @theatre/studio, @theatre/r3f, sheets, sheet objects, sequences, keyframes, visual animation editing, editable 3D cameras/meshes, or persisting animation state as JSON. Alternative to hand-coding GSAP timelines when a visual, keyframe-based workflow and reusable animation state are preferred.",
+      "category": "animation",
+      "tags": [
+        "theatrejs",
+        "animation",
+        "sequencing",
+        "keyframes",
+        "motion-design"
+      ],
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "threejs-webgl",
-      "source": "./plugins/individual/threejs-webgl",
+      "source": "./individual/threejs-webgl",
       "version": "1.0.0",
       "description": "Comprehensive skill for Three.js 3D web development. Use this skill when building interactive 3D scenes, WebGL/WebGPU applications, product configurators, 3D visualizations, or immersive web experiences. Triggers on tasks involving Three.js, 3D rendering, scenes, cameras, meshes, materials, lights, animations, textures, or WebGL/WebGPU rendering.",
       "category": "3d-graphics",
@@ -391,15 +346,12 @@
         "graphics",
         "webgpu"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "web3d-integration-patterns",
-      "source": "./plugins/individual/web3d-integration-patterns",
+      "source": "./individual/web3d-integration-patterns",
       "version": "1.0.0",
       "description": "Meta-skill for combining Three.js, GSAP ScrollTrigger, React Three Fiber, Motion, and React Spring for complex 3D web experiences. Use when building applications that integrate multiple 3D and animation libraries, requiring architecture patterns, state management, and performance optimization across the stack. Triggers on tasks involving library integration, multi-library architectures, scroll-driven 3D experiences, physics-based 3D animations, or complex interactive 3D applications.",
       "category": "integration",
@@ -409,15 +361,12 @@
         "3d",
         "animation"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "animation-components",
-      "source": "./plugins/bundles/animation-components",
+      "source": "./bundles/animation-components",
       "version": "1.0.0",
       "description": "Comprehensive animation and component libraries with React Spring, Magic UI, React Bits, AOS, Anime.js, and Lottie",
       "category": "bundle",
@@ -428,15 +377,20 @@
         "ui",
         "motion"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "bundle": true,
+      "includes": [
+        "react-spring-physics",
+        "animated-component-libraries",
+        "scroll-reveal-libraries",
+        "animejs",
+        "lottie-animations"
+      ],
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "authoring-motion",
-      "source": "./plugins/bundles/authoring-motion",
+      "source": "./bundles/authoring-motion",
       "version": "1.0.0",
       "description": "Professional 3D authoring and motion graphics pipeline with Blender, Spline, Rive, and Substance 3D",
       "category": "bundle",
@@ -447,15 +401,19 @@
         "motion-graphics",
         "3d"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "bundle": true,
+      "includes": [
+        "blender-web-pipeline",
+        "spline-interactive",
+        "rive-interactive",
+        "substance-3d-texturing"
+      ],
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "core-3d-animation",
-      "source": "./plugins/bundles/core-3d-animation",
+      "source": "./bundles/core-3d-animation",
       "version": "1.0.0",
       "description": "Complete core 3D and animation stack with Three.js, GSAP, React Three Fiber, Framer Motion, and Babylon.js",
       "category": "bundle",
@@ -466,15 +424,20 @@
         "core",
         "complete-stack"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "bundle": true,
+      "includes": [
+        "threejs-webgl",
+        "gsap-scrolltrigger",
+        "react-three-fiber",
+        "motion-framer",
+        "babylonjs-engine"
+      ],
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "extended-3d-scroll",
-      "source": "./plugins/bundles/extended-3d-scroll",
+      "source": "./bundles/extended-3d-scroll",
       "version": "1.0.0",
       "description": "Extended 3D graphics and smooth scroll stack with A-Frame, lightweight effects, PlayCanvas, PixiJS, Locomotive Scroll, and Barba.js",
       "category": "bundle",
@@ -485,15 +448,21 @@
         "effects",
         "transitions"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "bundle": true,
+      "includes": [
+        "aframe-webxr",
+        "lightweight-3d-effects",
+        "playcanvas-engine",
+        "pixijs-2d",
+        "locomotive-scroll",
+        "barba-js"
+      ],
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     },
     {
       "name": "meta-skills",
-      "source": "./plugins/bundles/meta-skills",
+      "source": "./bundles/meta-skills",
       "version": "1.0.0",
       "description": "Integration patterns and modern web design guidelines for building cohesive 3D/animation experiences",
       "category": "bundle",
@@ -504,10 +473,12 @@
         "design",
         "patterns"
       ],
-      "author": {
-        "name": "Claude Design Skillstack",
-        "email": "oladotun.olatunji@gmail.com"
-      },
+      "bundle": true,
+      "includes": [
+        "web3d-integration-patterns",
+        "modern-web-design"
+      ],
+      "author": "Claude Design Skillstack",
       "license": "Apache-2.0"
     }
   ]

@@ -1,0 +1,22 @@
+{
+  "name": "motion-framer",
+  "version": "1.0.0",
+  "description": "Modern animation library for React and JavaScript. Create smooth, production-ready animations with motion components, variants, gestures (hover/tap/drag), layout animations, AnimatePresence exit animations, spring physics, and scroll-based effects. Use when building interactive UI components, micro-interactions, page transitions, or complex animation sequences.",
+  "author": "Claude Design Skillstack",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/freshtechbro/claudedesignskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freshtechbro/claudedesignskills.git"
+  },
+  "keywords": [
+    "motion",
+    "framer-motion",
+    "react",
+    "animation"
+  ],
+  "category": "animation",
+  "skills": "skills/",
+  "commands": "commands/",
+  "agents": "agents/"
+}

@@ -1,0 +1,23 @@
+{
+  "name": "blender-web-pipeline",
+  "version": "1.0.0",
+  "description": "Blender to web export workflows for 3D models and animations. Use this skill when exporting Blender models to glTF for web, optimizing 3D assets for Three.js or Babylon.js, batch processing models with Python scripts, automating Blender workflows, or creating web-ready 3D pipelines. Triggers on tasks involving Blender glTF export, bpy scripting, 3D asset optimization, model compression, texture baking, or Blender automation. Exports models for threejs-webgl, react-three-fiber, and babylonjs-engine skills.",
+  "author": "Claude Design Skillstack",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/freshtechbro/claudedesignskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freshtechbro/claudedesignskills.git"
+  },
+  "keywords": [
+    "blender",
+    "gltf",
+    "export",
+    "pipeline",
+    "3d"
+  ],
+  "category": "3d-authoring",
+  "skills": "skills/",
+  "commands": "commands/",
+  "agents": "agents/"
+}

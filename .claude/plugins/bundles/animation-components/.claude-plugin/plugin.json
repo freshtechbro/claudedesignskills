@@ -1,0 +1,31 @@
+{
+  "name": "animation-components",
+  "version": "1.0.0",
+  "description": "Comprehensive animation and component libraries with React Spring, Magic UI, React Bits, AOS, Anime.js, and Lottie",
+  "author": "Claude Design Skillstack",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/freshtechbro/claudedesignskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freshtechbro/claudedesignskills.git"
+  },
+  "keywords": [
+    "bundle",
+    "animation",
+    "components",
+    "ui",
+    "motion"
+  ],
+  "category": "bundle",
+  "bundle": true,
+  "includes": [
+    "react-spring-physics",
+    "animated-component-libraries",
+    "scroll-reveal-libraries",
+    "animejs",
+    "lottie-animations"
+  ],
+  "skills": "skills/",
+  "commands": "commands/",
+  "agents": "agents/"
+}

@@ -1,0 +1,22 @@
+{
+  "name": "modern-web-design",
+  "version": "1.0.0",
+  "description": "Modern web design trends, principles, and implementation patterns for 2024-2025. Use this skill when designing websites, creating interactive experiences, implementing design systems, ensuring accessibility, or building performance-first interfaces. Triggers on tasks involving modern design trends, micro-interactions, scrollytelling, bold minimalism, cursor UX, glassmorphism, accessibility compliance, performance optimization, or design system architecture. References animation skills (GSAP, Framer Motion, React Spring), 3D skills (Three.js, R3F, Babylon.js), and component libraries for implementation guidance.",
+  "author": "Claude Design Skillstack",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/freshtechbro/claudedesignskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freshtechbro/claudedesignskills.git"
+  },
+  "keywords": [
+    "design",
+    "trends",
+    "ux",
+    "web"
+  ],
+  "category": "design",
+  "skills": "skills/",
+  "commands": "commands/",
+  "agents": "agents/"
+}

@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: #0b0b12;
+  color: #f5f5f7;
+  font-family: system-ui, -apple-system, sans-serif;
+  display: grid;
+  place-items: center;
+}
+
+main {
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+}
+
+.box {
+  display: grid;
+  place-items: center;
+  width: 160px;
+  height: 160px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #ff4dd8 0%, #7b5cff 100%);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  will-change: transform, opacity;
+}

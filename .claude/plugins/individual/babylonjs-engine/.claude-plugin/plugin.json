@@ -1,0 +1,22 @@
+{
+  "name": "babylonjs-engine",
+  "version": "1.0.0",
+  "description": "Comprehensive skill for Babylon.js 3D web rendering engine. Use this skill when building real-time 3D experiences, browser-based games, interactive visualizations, or immersive web applications. Triggers on tasks involving Babylon.js, 3D scenes, WebGL/WebGPU rendering, entity-component systems, physics simulations, PBR materials, shadow mapping, or 3D model loading. Alternative to Three.js with built-in editor integration and game engine features.",
+  "author": "Claude Design Skillstack",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/freshtechbro/claudedesignskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freshtechbro/claudedesignskills.git"
+  },
+  "keywords": [
+    "babylonjs",
+    "3d",
+    "webgl",
+    "game-engine"
+  ],
+  "category": "3d-graphics",
+  "skills": "skills/",
+  "commands": "commands/",
+  "agents": "agents/"
+}

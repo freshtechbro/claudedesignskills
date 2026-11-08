@@ -1,0 +1,22 @@
+{
+  "name": "react-spring-physics",
+  "version": "1.0.0",
+  "description": "Physics-based animation library combining React Spring (spring dynamics, gesture integration, 60fps animations) and Popmotion (low-level composable animation utilities, reactive streams). Use when building fluid, natural-feeling UI animations, gesture-driven interfaces, physics simulations, or spring-loaded interactions. Triggers on tasks involving React Spring hooks, spring physics, inertia scrolling, physics-based motion, animation composition, or natural UI movements. Alternative physics approach to motion-framer for more physically accurate animations.",
+  "author": "Claude Design Skillstack",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/freshtechbro/claudedesignskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freshtechbro/claudedesignskills.git"
+  },
+  "keywords": [
+    "react-spring",
+    "physics",
+    "animation",
+    "spring"
+  ],
+  "category": "animation",
+  "skills": "skills/",
+  "commands": "commands/",
+  "agents": "agents/"
+}

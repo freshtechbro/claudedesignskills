@@ -1,0 +1,23 @@
+{
+  "name": "threejs-webgl",
+  "version": "1.0.0",
+  "description": "Comprehensive skill for Three.js 3D web development. Use this skill when building interactive 3D scenes, WebGL/WebGPU applications, product configurators, 3D visualizations, or immersive web experiences. Triggers on tasks involving Three.js, 3D rendering, scenes, cameras, meshes, materials, lights, animations, textures, or WebGL/WebGPU rendering.",
+  "author": "Claude Design Skillstack",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/freshtechbro/claudedesignskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freshtechbro/claudedesignskills.git"
+  },
+  "keywords": [
+    "webgl",
+    "threejs",
+    "3d",
+    "graphics",
+    "webgpu"
+  ],
+  "category": "3d-graphics",
+  "skills": "skills/",
+  "commands": "commands/",
+  "agents": "agents/"
+}

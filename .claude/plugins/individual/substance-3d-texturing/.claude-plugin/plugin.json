@@ -1,0 +1,22 @@
+{
+  "name": "substance-3d-texturing",
+  "version": "1.0.0",
+  "description": "Comprehensive skill for Adobe Substance 3D Painter texturing and material creation workflow. Use this skill when creating PBR materials, exporting textures for web/game engines, optimizing 3D assets for real-time rendering, or automating texture workflows. Triggers on tasks involving Substance 3D Painter, PBR texturing, material creation, texture export for Three.js, Babylon.js, Unity, Unreal, glTF optimization, or Python API automation. Creates optimized textures for threejs-webgl, react-three-fiber, and babylonjs-engine materials.",
+  "author": "Claude Design Skillstack",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/freshtechbro/claudedesignskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freshtechbro/claudedesignskills.git"
+  },
+  "keywords": [
+    "substance",
+    "texturing",
+    "pbr",
+    "materials"
+  ],
+  "category": "3d-authoring",
+  "skills": "skills/",
+  "commands": "commands/",
+  "agents": "agents/"
+}

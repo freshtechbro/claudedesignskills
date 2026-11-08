@@ -1,0 +1,22 @@
+{
+  "name": "gsap-scrolltrigger",
+  "version": "1.0.0",
+  "description": "Comprehensive skill for GSAP (GreenSock Animation Platform) and ScrollTrigger plugin. Use this skill when creating web animations, scroll-driven experiences, timelines, tweens, scroll-triggered animations, pinning, scrubbing, parallax effects, or animating DOM elements, SVG, Canvas, WebGL, or Three.js. Triggers on tasks involving GSAP, ScrollTrigger, smooth animations, scroll effects, or animation sequencing.",
+  "author": "Claude Design Skillstack",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/freshtechbro/claudedesignskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freshtechbro/claudedesignskills.git"
+  },
+  "keywords": [
+    "gsap",
+    "animation",
+    "scroll",
+    "scrolltrigger"
+  ],
+  "category": "animation",
+  "skills": "skills/",
+  "commands": "commands/",
+  "agents": "agents/"
+}

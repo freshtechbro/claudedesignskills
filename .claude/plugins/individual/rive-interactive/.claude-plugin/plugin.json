@@ -1,0 +1,22 @@
+{
+  "name": "rive-interactive",
+  "version": "1.0.0",
+  "description": "State machine-based vector animation with runtime interactivity and web integration. Use this skill when creating interactive animations, state-driven UI, animated components with logic, or designer-created animations with runtime control. Triggers on tasks involving Rive, state machines, interactive vector animations, animation with input handling, ViewModel data binding, or React Rive integration. Alternative to Lottie for animations requiring state machines and two-way interactivity.",
+  "author": "Claude Design Skillstack",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/freshtechbro/claudedesignskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freshtechbro/claudedesignskills.git"
+  },
+  "keywords": [
+    "rive",
+    "interactive",
+    "state-machine",
+    "animation"
+  ],
+  "category": "animation",
+  "skills": "skills/",
+  "commands": "commands/",
+  "agents": "agents/"
+}

@@ -1,0 +1,240 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    background: #000;
+    color: #fff;
+}
+
+/* App Container */
+#app {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Canvas */
+#application-canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+    touch-action: none;
+}
+
+/* Loading Screen */
+#loading-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    z-index: 1000;
+    transition: opacity 0.5s ease;
+}
+
+#loading-screen.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+#loading-screen p {
+    margin-top: 20px;
+    font-size: 18px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    opacity: 0.8;
+}
+
+/* UI Overlay */
+#ui-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 10;
+}
+
+#ui-overlay > * {
+    pointer-events: auto;
+}
+
+/* Info Panel */
+#info-panel {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+#info-panel h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+#info-panel p {
+    font-size: 14px;
+    opacity: 0.8;
+    line-height: 1.5;
+}
+
+/* Stats Panel */
+#stats-panel {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    min-width: 180px;
+}
+
+#stats-panel.hidden {
+    display: none;
+}
+
+.stat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.stat:last-child {
+    margin-bottom: 0;
+}
+
+.stat .label {
+    opacity: 0.7;
+    margin-right: 15px;
+}
+
+.stat span:last-child {
+    font-weight: 600;
+    font-variant-numeric: tabular-nums;
+}
+
+/* Controls Panel */
+#controls-panel {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    #info-panel {
+        top: 10px;
+        left: 10px;
+        padding: 15px;
+    }
+
+    #info-panel h1 {
+        font-size: 20px;
+    }
+
+    #info-panel p {
+        font-size: 12px;
+    }
+
+    #stats-panel {
+        top: 10px;
+        right: 10px;
+        padding: 10px;
+        min-width: 150px;
+        font-size: 12px;
+    }
+
+    #controls-panel {
+        bottom: 10px;
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    button {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+}
+
+/* Performance Indicator */
+.performance-warning {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255, 100, 100, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 100;
+}
+
+.performance-warning.hidden {
+    display: none;
+}

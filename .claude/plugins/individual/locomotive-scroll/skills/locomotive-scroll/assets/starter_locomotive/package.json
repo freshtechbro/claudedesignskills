@@ -1,0 +1,17 @@
+{
+  "name": "locomotive-scroll-starter",
+  "version": "1.0.0",
+  "description": "Locomotive Scroll starter template with examples",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "locomotive-scroll": "^4.1.4"
+  },
+  "devDependencies": {
+    "vite": "^5.0.0"
+  }
+}
