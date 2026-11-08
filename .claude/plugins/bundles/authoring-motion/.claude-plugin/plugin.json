@@ -1,0 +1,30 @@
+{
+  "name": "authoring-motion",
+  "version": "1.0.0",
+  "description": "Professional 3D authoring and motion graphics pipeline with Blender, Spline, Rive, and Substance 3D",
+  "author": "Claude Design Skillstack",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/freshtechbro/claudedesignskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freshtechbro/claudedesignskills.git"
+  },
+  "keywords": [
+    "bundle",
+    "authoring",
+    "pipeline",
+    "motion-graphics",
+    "3d"
+  ],
+  "category": "bundle",
+  "bundle": true,
+  "includes": [
+    "blender-web-pipeline",
+    "spline-interactive",
+    "rive-interactive",
+    "substance-3d-texturing"
+  ],
+  "skills": "skills/",
+  "commands": "commands/",
+  "agents": "agents/"
+}

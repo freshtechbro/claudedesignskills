@@ -1,0 +1,87 @@
+{
+  "exportPresets": [
+    {
+      "name": "Mobile_WebGL",
+      "maps": [
+        {
+          "fileName": "$textureSet_color",
+          "channels": [
+            {
+              "destChannel": "R",
+              "srcChannel": "R",
+              "srcMapType": "documentMap",
+              "srcMapName": "baseColor"
+            },
+            {
+              "destChannel": "G",
+              "srcChannel": "G",
+              "srcMapType": "documentMap",
+              "srcMapName": "baseColor"
+            },
+            {
+              "destChannel": "B",
+              "srcChannel": "B",
+              "srcMapType": "documentMap",
+              "srcMapName": "baseColor"
+            }
+          ],
+          "parameters": {
+            "fileFormat": "jpeg",
+            "bitDepth": "8",
+            "sizeLog2": 9
+          }
+        },
+        {
+          "fileName": "$textureSet_normal",
+          "channels": [
+            {
+              "destChannel": "R",
+              "srcChannel": "R",
+              "srcMapType": "documentMap",
+              "srcMapName": "normal"
+            },
+            {
+              "destChannel": "G",
+              "srcChannel": "G",
+              "srcMapType": "documentMap",
+              "srcMapName": "normal"
+            }
+          ],
+          "parameters": {
+            "fileFormat": "png",
+            "bitDepth": "8",
+            "sizeLog2": 9
+          }
+        },
+        {
+          "fileName": "$textureSet_packed",
+          "channels": [
+            {
+              "destChannel": "R",
+              "srcChannel": "R",
+              "srcMapType": "documentMap",
+              "srcMapName": "ambientOcclusion"
+            },
+            {
+              "destChannel": "G",
+              "srcChannel": "R",
+              "srcMapType": "documentMap",
+              "srcMapName": "roughness"
+            },
+            {
+              "destChannel": "B",
+              "srcChannel": "R",
+              "srcMapType": "documentMap",
+              "srcMapName": "metallic"
+            }
+          ],
+          "parameters": {
+            "fileFormat": "png",
+            "bitDepth": "8",
+            "sizeLog2": 9
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lightweight 3D Effects - Starter Template</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Vanta.js Background -->
+  <div id="vanta-bg"></div>
+
+  <!-- Main Content -->
+  <div class="container">
+    <!-- Hero Section -->
+    <section class="hero">
+      <canvas class="hero-zdog" width="200" height="200"></canvas>
+      <h1>Lightweight 3D Effects</h1>
+      <p class="subtitle">Combining Vanta.js, Zdog, and Vanilla-Tilt</p>
+    </section>
+
+    <!-- Feature Cards -->
+    <section class="cards">
+      <div class="card tilt-card" data-tilt>
+        <canvas class="card-icon zdog-icon-1" width="120" height="120"></canvas>
+        <h2>Vanta.js</h2>
+        <p>Animated WebGL backgrounds powered by Three.js for immersive visual experiences.</p>
+        <button class="card-btn">Learn More</button>
+      </div>
+
+      <div class="card tilt-card" data-tilt>
+        <canvas class="card-icon zdog-icon-2" width="120" height="120"></canvas>
+        <h2>Zdog</h2>
+        <p>Pseudo-3D engine for canvas and SVG. Create flat designs with dimensional depth.</p>
+        <button class="card-btn">Learn More</button>
+      </div>
+
+      <div class="card tilt-card" data-tilt>
+        <canvas class="card-icon zdog-icon-3" width="120" height="120"></canvas>
+        <h2>Vanilla-Tilt</h2>
+        <p>Smooth 3D tilt effect for any DOM element. Perfect for interactive cards.</p>
+        <button class="card-btn">Learn More</button>
+      </div>
+    </section>
+
+    <!-- Interactive Demo -->
+    <section class="demo-section">
+      <div class="demo-card tilt-card" data-tilt>
+        <canvas class="demo-zdog" width="300" height="300"></canvas>
+        <div class="demo-controls">
+          <h3>Interactive Demo</h3>
+          <p>Hover and drag to interact</p>
+          <div class="control-buttons">
+            <button id="toggleSpin">Pause</button>
+            <button id="changeColor">Change Color</button>
+            <button id="resetView">Reset</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>Built with ❤️ using Vanta.js, Zdog, and Vanilla-Tilt</p>
+      <div class="footer-links">
+        <a href="https://www.vantajs.com" target="_blank">Vanta.js</a>
+        <a href="https://zzz.dog" target="_blank">Zdog</a>
+        <a href="https://github.com/micku7zu/vanilla-tilt.js" target="_blank">Vanilla-Tilt</a>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Scripts -->
+  <!-- Three.js (required for Vanta) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
+
+  <!-- Vanta.js WAVES effect -->
+  <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.waves.min.js"></script>
+
+  <!-- Zdog -->
+  <script src="https://unpkg.com/zdog@1/dist/zdog.dist.min.js"></script>
+
+  <!-- Vanilla Tilt -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.8.1/vanilla-tilt.min.js"></script>
+
+  <!-- Main JavaScript -->
+  <script src="main.js"></script>
+</body>
+</html>

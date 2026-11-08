@@ -1,0 +1,28 @@
+{
+  "name": "meta-skills",
+  "version": "1.0.0",
+  "description": "Integration patterns and modern web design guidelines for building cohesive 3D/animation experiences",
+  "author": "Claude Design Skillstack",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/freshtechbro/claudedesignskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freshtechbro/claudedesignskills.git"
+  },
+  "keywords": [
+    "bundle",
+    "meta",
+    "integration",
+    "design",
+    "patterns"
+  ],
+  "category": "bundle",
+  "bundle": true,
+  "includes": [
+    "web3d-integration-patterns",
+    "modern-web-design"
+  ],
+  "skills": "skills/",
+  "commands": "commands/",
+  "agents": "agents/"
+}

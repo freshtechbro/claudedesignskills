@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GSAP ScrollTrigger Starter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Loading Screen -->
+  <div id="loading">
+    <div class="spinner"></div>
+    <p>Loading...</p>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-container">
+      <div class="logo">ScrollSite</div>
+      <ul class="nav-links">
+        <li><a href="#hero" class="nav-item">Home</a></li>
+        <li><a href="#features" class="nav-item">Features</a></li>
+        <li><a href="#gallery" class="nav-item">Gallery</a></li>
+        <li><a href="#contact" class="nav-item">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Progress Bar -->
+  <div class="progress-bar"></div>
+
+  <!-- Hero Section -->
+  <section id="hero" class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">Welcome to ScrollSite</h1>
+      <p class="hero-subtitle">Experience smooth scroll-driven animations</p>
+      <button class="cta-btn">Get Started</button>
+    </div>
+    <div class="scroll-indicator">
+      <span>Scroll to explore</span>
+      <div class="mouse"></div>
+    </div>
+  </section>
+
+  <!-- Features Section (Fade In) -->
+  <section id="features" class="section features-section">
+    <div class="container">
+      <h2 class="section-title">Features</h2>
+
+      <div class="cards-grid">
+        <div class="card fade-in">
+          <div class="card-icon">🚀</div>
+          <h3>Fast Performance</h3>
+          <p>Optimized animations with GPU acceleration for smooth 60fps experiences.</p>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card-icon">🎨</div>
+          <h3>Beautiful Design</h3>
+          <p>Modern, responsive layouts that look stunning on all devices.</p>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card-icon">⚡</div>
+          <h3>Easy to Use</h3>
+          <p>Simple API with powerful features for creating complex animations.</p>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card-icon">📱</div>
+          <h3>Responsive</h3>
+          <p>Adapts seamlessly to desktop, tablet, and mobile screens.</p>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card-icon">🔧</div>
+          <h3>Customizable</h3>
+          <p>Easily modify animations, timing, and easing functions.</p>
+        </div>
+
+        <div class="card fade-in">
+          <div class="card-icon">💎</div>
+          <h3>Production Ready</h3>
+          <p>Battle-tested code ready for real-world projects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Parallax Section -->
+  <section class="section parallax-section">
+    <div class="parallax-bg"></div>
+    <div class="parallax-content container">
+      <h2 class="section-title">Parallax Effects</h2>
+      <p class="section-text">Background moves at a different speed for depth perception</p>
+    </div>
+  </section>
+
+  <!-- Pin Section -->
+  <section class="section pin-section">
+    <div class="container pin-container">
+      <div class="pin-content">
+        <h2 class="pin-title">Pinned Animation</h2>
+        <p class="pin-text">This section stays pinned while content animates</p>
+
+        <div class="pin-boxes">
+          <div class="pin-box box-1"></div>
+          <div class="pin-box box-2"></div>
+          <div class="pin-box box-3"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Image Gallery (Stagger) -->
+  <section id="gallery" class="section gallery-section">
+    <div class="container">
+      <h2 class="section-title">Gallery</h2>
+
+      <div class="gallery-grid">
+        <div class="gallery-item">
+          <div class="gallery-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+          <div class="gallery-overlay">
+            <h3>Project 1</h3>
+            <p>Creative Design</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+          <div class="gallery-overlay">
+            <h3>Project 2</h3>
+            <p>Brand Identity</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+          <div class="gallery-overlay">
+            <h3>Project 3</h3>
+            <p>Web Development</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-image" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);"></div>
+          <div class="gallery-overlay">
+            <h3>Project 4</h3>
+            <p>Mobile App</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+          <div class="gallery-overlay">
+            <h3>Project 5</h3>
+            <p>UI/UX Design</p>
+          </div>
+        </div>
+
+        <div class="gallery-item">
+          <div class="gallery-image" style="background: linear-gradient(135deg, #30cfd0 0%, #330867 100%);"></div>
+          <div class="gallery-overlay">
+            <h3>Project 6</h3>
+            <p>Motion Graphics</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Horizontal Scroll Section -->
+  <section class="section horizontal-section">
+    <div class="horizontal-wrapper">
+      <div class="horizontal-panels">
+        <div class="horizontal-panel" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+          <h2>Panel 1</h2>
+          <p>Horizontal scrolling creates unique experiences</p>
+        </div>
+
+        <div class="horizontal-panel" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+          <h2>Panel 2</h2>
+          <p>Each panel can have different content</p>
+        </div>
+
+        <div class="horizontal-panel" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+          <h2>Panel 3</h2>
+          <p>Scroll vertically to move horizontally</p>
+        </div>
+
+        <div class="horizontal-panel" style="background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);">
+          <h2>Panel 4</h2>
+          <p>Great for storytelling and portfolios</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Text Reveal Section -->
+  <section class="section text-section">
+    <div class="container">
+      <div class="text-reveal">
+        <h2 class="reveal-line">Text reveals</h2>
+        <h2 class="reveal-line">line by line</h2>
+        <h2 class="reveal-line">for dramatic</h2>
+        <h2 class="reveal-line">storytelling</h2>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section contact-section">
+    <div class="container">
+      <h2 class="section-title">Get in Touch</h2>
+
+      <form class="contact-form">
+        <div class="form-group fade-in">
+          <input type="text" placeholder="Your Name" required>
+        </div>
+
+        <div class="form-group fade-in">
+          <input type="email" placeholder="Your Email" required>
+        </div>
+
+        <div class="form-group fade-in">
+          <textarea placeholder="Your Message" rows="5" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn fade-in">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 ScrollSite. Built with GSAP & ScrollTrigger.</p>
+      <p class="footer-links">
+        <a href="#">GitHub</a> •
+        <a href="#">Twitter</a> •
+        <a href="#">LinkedIn</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- GSAP Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3/dist/ScrollToPlugin.min.js"></script>
+  <script src="main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "locomotive-scroll",
+  "version": "1.0.0",
+  "description": "Comprehensive skill for Locomotive Scroll smooth scrolling library with parallax effects, viewport detection, and scroll-driven animations. Use this skill when implementing smooth scrolling experiences, creating parallax effects, building scroll-triggered animations, or developing immersive scrolling websites. Triggers on tasks involving Locomotive Scroll, smooth scrolling, parallax, scroll detection, scroll events, sticky elements, horizontal scrolling, or GSAP ScrollTrigger integration. Integrates with GSAP for advanced scroll-driven animations.",
+  "author": "Claude Design Skillstack",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/freshtechbro/claudedesignskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freshtechbro/claudedesignskills.git"
+  },
+  "keywords": [
+    "locomotive",
+    "smooth-scroll",
+    "parallax",
+    "scroll"
+  ],
+  "category": "scroll",
+  "skills": "skills/",
+  "commands": "commands/",
+  "agents": "agents/"
+}

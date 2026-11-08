@@ -1,0 +1,22 @@
+{
+  "name": "animejs",
+  "version": "1.0.0",
+  "description": "Versatile JavaScript animation engine for DOM, CSS, SVG, and JavaScript objects. Use when creating timeline-based animations, stagger effects, SVG morphing, keyframe sequences, or complex choreographed animations. Triggers on tasks involving Anime.js, timeline animations, staggered sequences, SVG path animations, morphing, or multi-step animation choreography. Alternative to GSAP for SVG-heavy animations and React-independent projects.",
+  "author": "Claude Design Skillstack",
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/freshtechbro/claudedesignskills",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/freshtechbro/claudedesignskills.git"
+  },
+  "keywords": [
+    "animejs",
+    "timeline",
+    "svg",
+    "animation"
+  ],
+  "category": "animation",
+  "skills": "skills/",
+  "commands": "commands/",
+  "agents": "agents/"
+}
